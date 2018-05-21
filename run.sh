@@ -31,7 +31,6 @@ if [ ! -f /etc/phpmyadmin/config.secret.inc.php ] ; then
 EOT
 fi
 
-if [ ! -f /etc/phpmyadmin/config.user.inc.php ] ; then
 cat > /etc/phpmyadmin/config.user.inc.php <<EOF
 	<?php
 	$cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
@@ -39,7 +38,6 @@ cat > /etc/phpmyadmin/config.user.inc.php <<EOF
 	$cfg['Servers'][$i]['controlpass'] = '${CONFIG_PASS}';
 	?>
 EOF
-fi
 
 mkdir -p /var/nginx/client_body_temp
 chown nobody:nobody /sessions /var/nginx/client_body_temp
