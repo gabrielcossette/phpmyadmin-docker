@@ -33,7 +33,7 @@ fi
 
 cat > /etc/phpmyadmin/config.user.inc.php <<EOF
 	<?php
-	\$cfg['Servers'][$i]['controlpass'] = '${CONFIG_PASS}';
+	\$cfg['Servers'][\$i]['controlpass'] = '${CONFIG_PASS}';
 	?>
 EOF
 
