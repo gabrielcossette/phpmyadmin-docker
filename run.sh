@@ -33,8 +33,6 @@ fi
 
 cat > /etc/phpmyadmin/config.user.inc.php <<EOF
 	<?php
-	\$cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
-	\$cfg['Servers'][$i]['controluser'] = 'phpmyadmin';
 	\$cfg['Servers'][$i]['controlpass'] = '${CONFIG_PASS}';
 	?>
 EOF
